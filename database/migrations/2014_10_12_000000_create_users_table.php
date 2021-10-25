@@ -19,7 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('email', 100)->unique();
             $table->char('gender',1)->nullable();
             $table->string('encrypted_password', 64);
-            $table->string('salt',32);
             $table->boolean('is_login');
             $table->string('auth_token',32)->nullable();
             $table->timestamps();

@@ -29,7 +29,6 @@ class UserController extends Controller
             if ($request->gender != "M" && $request->gender != "F") {
                 $this->returnJsonErrorDataNotValid("Gender must be 'M' of 'F'");
             }
-            $user->salt = Str::random(32);
             $user->gender = $request->input('gender');
             $user->save();
             // dd($user);
